@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "sourceMap":true ,
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "noImplicitAny": false,
+    "alwaysStrict": false,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src"]
+}
