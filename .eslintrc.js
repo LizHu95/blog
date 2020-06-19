@@ -1,22 +1,23 @@
 module.exports = {
-    parser: '@typescript-eslint/parser',
-    extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommanded'],
-    plugins: ['@typescript-eslint'],
     env: {
         browser: true,
-        node: true
+        es2020: true
     },
-    settings: {
-        react: {
-            pragma: 'React',
-            version: 'detect'
-        }
-    },
+    extends: ['plugin:react/recommended', 'standard'],
+    parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaVersion: 2019,
-        sourceType: 'module',
         ecmaFeatures: {
             jsx: true
-        }
+        },
+        ecmaVersion: 11,
+        sourceType: 'module'
+    },
+    plugins: ['react', '@typescript-eslint'],
+    rules: {
+        semi: [0, 'always'],
+        indent: ['error', 4],
+        'react/no-unescaped-entities': [0],
+        quotes: ['error', 'single'],
+        eqeqeq: [2, 'allow-null']
     }
 };

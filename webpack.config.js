@@ -34,13 +34,13 @@ module.exports = {
             },
             {
                 test: /\.ts(x?)$/,
-                loader: 'ts-loader',
+                loader: ['ts-loader', 'eslint-loader'],
                 exclude: /node_modules/
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: ['babel-loader', 'eslint-loader']
             }
         ]
     },
